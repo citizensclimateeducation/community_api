@@ -13,7 +13,7 @@ class SWCAdapter(HTTPAdapter):
     """
 
     DEFAULT_TIMEOUT = 60  # seconds
-    SWC_API_RATE = 0.4
+    SWC_API_RATE = 0.3
 
     def __init__(self, *args, swc_token, **kwargs):
         self.swc_token = swc_token
