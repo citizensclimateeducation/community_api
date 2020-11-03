@@ -9,7 +9,7 @@ with open("requirements.txt") as reqs:
 
 setup(
     name="swc_api",
-    version="0.1.6",
+    version="0.1.8",
     description="A library for interacting with the Small World Community REST API",
     long_description=readme,
     long_description_content_type='text/x-rst',

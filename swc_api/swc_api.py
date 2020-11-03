@@ -72,6 +72,18 @@ class SWCSession(sessions.BaseUrlSession):
 
         return data
 
+    def all_records(self, url, **kwargs):
+        """Paginate and yield each record as a generator """
+        response = self.get(url, **kwargs)
+        for r in response.json():
+            yield r
+
+        while self.has_more_pages(response):
+            next_page = response.links.get("next").get("url")
+            response = self.get(next_page)
+            for r in response.json():
+                yield r
+
     def has_more_pages(self, response):
         """Check headers to see if this response has more pages """
         return (
