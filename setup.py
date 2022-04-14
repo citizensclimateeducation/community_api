@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open("README.rst", encoding='utf-8') as README:
+with open("README.rst", encoding="utf-8") as README:
     readme = str(README.read())
 
 with open("requirements.txt") as reqs:
@@ -9,10 +9,10 @@ with open("requirements.txt") as reqs:
 
 setup(
     name="swc_api",
-    version="0.1.8",
+    version="0.1.10",
     description="A library for interacting with the Small World Community REST API",
     long_description=readme,
-    long_description_content_type='text/x-rst',
+    long_description_content_type="text/x-rst",
     url="https://github.com/citizensclimateeducation/community_api",
     author="Bryan Hermsen",
     author_email="b_hermse@hotmail.com",
